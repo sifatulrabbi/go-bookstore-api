@@ -2,14 +2,14 @@ package models
 
 import (
 	"github.com/jinzhu/gorm"
-	"github.com/sifatulrabbi/bookstore/src/configs"
+	"github.com/sifatulrabbi/bookstore/pkg/configs"
 )
 
 var db *gorm.DB
 
 type Book struct {
 	gorm.Model
-	Name        string `gorm:"name"`
+	Name        string `json:"name"`
 	Author      string `json:"author"`
 	Publication string `json:"publication"`
 }
